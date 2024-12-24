@@ -128,7 +128,7 @@ export class DexScreener implements ExchangeAdapter {
           .map((pair: any) => pair.chainId.toUpperCase())
       );
 
-      return Array.from(networks);
+      return Array.from(networks) as string[];
     } catch (error) {
       console.error(`Error getting networks from DexScreener: ${error}`);
       return [];
